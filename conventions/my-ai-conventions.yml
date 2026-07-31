@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/Me-Protocol/me-agent-sdk + live probe of https://paas.memarketplace.io/v1/api
+docs: https://me-api-docs.pages.dev/
+description: Cross-cutting request/response semantics for the Me Protocol PaaS API,
+  captured from the first-party SDK source and live responses (no public OpenAPI is
+  published).
+authentication:
+  style: apiKey
+  detail: Brand API key (apiKey) plus Magic Link wallet auth for on-chain redemption.
+  ref: authentication/my-ai-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v1
+  example: https://paas.memarketplace.io/v1/api/
+media_type: application/json
+response_envelope:
+  success:
+    shape: '{ "data": <payload>, "message": "success", "statusCode": <int> }'
+    observed: 'GET /v1/api -> {"data":"Hello World!","message":"success","statusCode":200}'
+  error:
+    shape: '{ "status": false, "message": <string> }'
+    observed: 'GET /v1/api/<unknown> -> {"status":false,"message":"Cannot GET ..."}'
+environments:
+  detail: dev / staging / prod, selected via the SDK environment enum; testnet vs
+    mainnet chains bound per environment.
+  ref: sandbox/my-ai-sandbox.yml
+idempotency:
+  supported: unknown
+  detail: No idempotency-key header or parameter is documented in the SDK source or
+    hosted API responses. On-chain settlement is transaction-hash addressable, but
+    the PaaS API exposes no documented idempotency contract — not asserted.
+pagination:
+  supported: unknown
+  detail: Not documented in the available SDK source or API responses.
+rate_limiting:
+  supported: unknown
+  detail: No rate-limit response headers documented.

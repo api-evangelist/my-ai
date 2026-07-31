@@ -1,0 +1,37 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/Me-Protocol + npm registry
+description: Client-side, embeddable UI components Me Protocol ships for dropping open
+  rewards into a storefront. Distinct from the server-side integration — these render
+  in the browser.
+families:
+- family: Rewards AI Agent
+  kind: chatbot-widget
+  components:
+  - name: MeAgent
+    description: Embeddable AI chatbot widget with real-time streaming responses, offer
+      recommendations, product discovery, and Magic Link wallet auth for on-chain
+      reward redemption. Exposes window.MeAgent; init() with position/environment/network.
+    loader: https://cdn.jsdelivr.net/npm/me-agent-sdk/dist/me-agent-sdk.min.js
+    package: me-agent-sdk
+    demo: https://me-protocol.github.io/me-agent-sdk/
+- family: PaaS Payment / Rewards
+  kind: embedded-modal
+  components:
+  - name: payWithMePaas (React)
+    description: React function that opens a hosted Me Protocol rewards/payment modal
+      (apiKey, amount, email; onSuccess/onError/onClose callbacks).
+    package: me-paas-sdk-react
+    repository: https://github.com/Me-Protocol/me-paas-sdk-react
+  - name: me-paas-sdk-inline
+    description: Inline HTML/JS SDK that renders a drop-in "Pay with Me" button/reward
+      surface directly in a page without a framework.
+    repository: https://github.com/Me-Protocol/me-paas-sdk-inline
+- family: Reward CDN Widget
+  kind: cdn-script
+  components:
+  - name: mepaas-reward-cdn
+    description: Drop-in CDN script that renders reward and referral surfaces on any
+      merchant site.
+    loader: https://cdn.jsdelivr.net/gh/Me-Protocol/mepaas-reward-cdn@main/cdn.js
+    repository: https://github.com/Me-Protocol/mepaas-reward-cdn

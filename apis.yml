@@ -1,7 +1,13 @@
 aid: my-ai
 name: My AI
-description: My AI is a company surfaced as a portfolio company of 500-global and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: My AI Inc. is the company behind Me Protocol, a universal open rewards
+  infrastructure that lets brands issue, redeem, and swap loyalty rewards across a
+  decentralized cross-brand ecosystem through a single API integration. Founded in
+  2022 by Robert Wesley and Paul Oamen and backed by 500 Global, the protocol combines
+  an EVM smart-contract layer (Sepolia, Hedera, Base, Polygon), a hosted Platform-as-a-Service
+  REST API, and embeddable SDKs — an AI agent chatbot widget plus drop-in React and
+  inline payment components — so merchants can plug frictionless open rewards into
+  web and agent-driven storefronts for the emerging AI Agent Economy.
 url: https://raw.githubusercontent.com/api-evangelist/my-ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +15,57 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://avatars.githubusercontent.com/u/109215693?v=4
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Rewards
+- Loyalty
+- Web3
+- Blockchain
+- API
+- SDK
+- AI Agent
+- Payments
+- Smart Contracts
+apis:
+- name: Me Protocol PaaS API
+  description: Hosted Platform-as-a-Service REST API for Me Protocol — the backend
+    behind the embeddable rewards SDKs. Authenticates SDK integrations with an API
+    key and brokers reward issuance, redemption, and cross-brand token swaps against
+    the on-chain Open Reward Diamond contracts. Base path is version-prefixed (/v1/api).
+  humanURL: https://me-api-docs.pages.dev/
+  baseURL: https://paas.memarketplace.io/v1/api/
+  tags:
+  - Rewards
+  - Loyalty
+  - Web3
+  - Payments
+  properties:
+  - type: Documentation
+    url: https://me-api-docs.pages.dev/
+  - type: APIReference
+    url: https://me-api-docs.pages.dev/
+  - type: Authentication
+    url: authentication/my-ai-authentication.yml
+  - type: Conventions
+    url: conventions/my-ai-conventions.yml
+  - type: Sandbox
+    url: sandbox/my-ai-sandbox.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +74,36 @@ maintainers:
 common:
 - type: Website
   url: https://meprotocol.io
+- type: DeveloperPortal
+  url: https://me-api-docs.pages.dev/
+- type: Documentation
+  url: https://me-api-docs.pages.dev/
+- type: GettingStarted
+  url: https://meprotocol.io/get-started
+- type: Pricing
+  url: https://meprotocol.io/pricing
+- type: Blog
+  url: https://meprotocol.io/blog
+- type: GitHubOrganization
+  url: https://github.com/Me-Protocol
+- type: Packages
+  url: packages/my-ai-packages.yml
+- type: SDKs
+  url: packages/my-ai-packages.yml
+- type: Components
+  url: components/my-ai-components.yml
+- type: Authentication
+  url: authentication/my-ai-authentication.yml
+- type: Sandbox
+  url: sandbox/my-ai-sandbox.yml
+- type: Conventions
+  url: conventions/my-ai-conventions.yml
+- type: LLMsTxt
+  url: llms/my-ai-llms.txt
+- type: DomainSecurity
+  url: security/my-ai-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1

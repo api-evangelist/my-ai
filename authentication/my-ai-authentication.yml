@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/Me-Protocol/me-agent-sdk (SDK config) + https://me-api-docs.pages.dev/
+docs: https://me-api-docs.pages.dev/
+summary:
+  types:
+  - apiKey
+  - wallet
+  api_key_in:
+  - query
+  - body
+note: No public OpenAPI is published; this profile is derived from the first-party
+  SDK source and hosted PaaS API behavior rather than a machine-readable securityScheme.
+schemes:
+- name: PaaS API Key
+  type: apiKey
+  in: query
+  parameter: apiKey
+  description: Brand/merchant API key issued by Me Protocol, passed by the PaaS SDKs
+    (payWithMePaas, MeAgent) to authenticate reward and payment calls against the
+    hosted PaaS API (paas.memarketplace.io/v1/api). Each environment (dev/staging/prod)
+    carries its own key.
+  sources:
+  - packages/my-ai-packages.yml
+- name: Magic Link Wallet Auth
+  type: wallet
+  scheme: magic-link
+  description: End-user authentication via Magic (magic.link) publishable key for
+    email-based wallet creation, used to authorize on-chain reward redemption and
+    cross-brand token swaps. Networks — Sepolia, Hedera, Base, Polygon.
+  sources:
+  - packages/my-ai-packages.yml

@@ -1,0 +1,47 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/Me-Protocol/me-agent-sdk/blob/main/src/core/config/env.ts
+description: Me Protocol exposes environment-based test/live separation through the
+  SDK environment enum. dev and staging run against blockchain testnets; prod runs
+  against mainnets. Values below are published verbatim in the first-party SDK source.
+environments:
+- name: dev
+  mode: testnet
+  api_url: https://paas.meappbounty.com/v1/api/
+  api_v1_url: https://api.meappbounty.com/
+  runtime_url: https://runtime.meappbounty.com
+  use_mainnet: false
+- name: staging
+  mode: testnet
+  api_url: https://paas.usemeprotocol.com/v1/api/
+  api_v1_url: https://api.usemeprotocol.com/
+  runtime_url: https://runtime.usemeprotocol.com
+  use_mainnet: false
+- name: prod
+  mode: mainnet
+  api_url: https://paas.memarketplace.io/v1/api/
+  api_v1_url: https://api.memarketplace.io/
+  runtime_url: https://runtime.memarketplace.io
+  use_mainnet: true
+test_networks:
+- network: sepolia
+  role: testnet
+  chain_id: '11155111'
+- network: hedera
+  role: testnet
+  chain_id: '296'
+selection:
+  detail: "MeAgent.init({ environment: MeAgent.Environment.DEV, network: MeAgent.Network.SEPOLIA })"
+  environment_enum:
+  - DEV
+  - STAGING
+  - PROD
+  network_enum:
+  - SEPOLIA
+  - HEDERA
+  - BASE
+  - POLYGON
+notes: |
+  Test API keys are per-brand and per-environment (issued by Me Protocol) — not
+  published as universal magic values, so none are reproduced here. Testnet reward
+  redemption uses faucet-funded testnet wallets on Sepolia/Hedera testnet.

@@ -1,0 +1,41 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/Me-Protocol + npm registry
+packages:
+- language: javascript
+  registry: npm
+  name: me-agent-sdk
+  version: 1.7.12
+  url: https://www.npmjs.com/package/me-agent-sdk
+  install: npm install me-agent-sdk
+  description: AI-powered chatbot widget SDK — embeddable rewards agent for any website
+    (vanilla HTML, React, Vue, Angular). Also loadable via CDN.
+  cdn: https://cdn.jsdelivr.net/npm/me-agent-sdk/dist/me-agent-sdk.min.js
+  repository: https://github.com/Me-Protocol/me-agent-sdk
+  official: true
+- language: javascript
+  registry: npm
+  name: "@meprotocol/agent-me-sdk"
+  version: 1.0.0
+  url: https://www.npmjs.com/package/@meprotocol/agent-me-sdk
+  install: npm install @meprotocol/agent-me-sdk
+  description: Scoped publication of the Me Agent chatbot SDK under the @meprotocol
+    npm scope.
+  repository: https://github.com/Me-Protocol/me-agent-sdk
+  official: true
+- language: javascript
+  registry: npm
+  name: me-paas-sdk-react
+  version: 1.0.7
+  url: https://www.npmjs.com/package/me-paas-sdk-react
+  install: npm install --save me-paas-sdk-react
+  description: Me Protocol-as-a-Service SDK for React — exposes payWithMePaas() to
+    drop a hosted rewards/payment modal into a React app.
+  repository: https://github.com/Me-Protocol/me-paas-sdk-react
+  official: true
+notes: |
+  No first-party packages found on PyPI, Maven Central, NuGet, pkg.go.dev, RubyGems,
+  Packagist, or crates.io — Me Protocol distributes only JavaScript/TypeScript client
+  libraries plus a browser inline SDK (me-paas-sdk-inline, source-only, delivered via
+  CDN not a package registry). The Rust `rusty-protocol-v0.1` and smart-contract repos
+  are protocol implementations, not client SDKs.

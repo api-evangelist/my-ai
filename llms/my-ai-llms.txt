@@ -1,0 +1,38 @@
+# My AI / Me Protocol
+
+> My AI Inc. is the company behind Me Protocol, a universal open rewards infrastructure that lets brands issue, redeem, and swap loyalty rewards across a decentralized cross-brand ecosystem through a single API integration. It combines an EVM smart-contract layer (Sepolia, Hedera, Base, Polygon), a hosted Platform-as-a-Service REST API, and embeddable SDKs for web and AI-agent storefronts. Founded 2022 by Robert Wesley and Paul Oamen; backed by 500 Global.
+
+## APIs
+
+- [Me Protocol PaaS API](https://me-api-docs.pages.dev/): Hosted REST API (base https://paas.memarketplace.io/v1/api/) authenticating SDK integrations with a brand API key and brokering reward issuance, redemption, and cross-brand token swaps.
+
+## Docs
+
+- [API Documentation](https://me-api-docs.pages.dev/)
+- [Developer Portal](https://me-api-docs.pages.dev/)
+- [Get Started](https://meprotocol.io/get-started)
+- [Pricing](https://meprotocol.io/pricing)
+- [About](https://meprotocol.io/about)
+- [Blog](https://meprotocol.io/blog)
+
+## SDKs & Components
+
+- [me-agent-sdk (npm)](https://www.npmjs.com/package/me-agent-sdk): embeddable AI rewards chatbot widget.
+- [@meprotocol/agent-me-sdk (npm)](https://www.npmjs.com/package/@meprotocol/agent-me-sdk): scoped agent SDK.
+- [me-paas-sdk-react (npm)](https://www.npmjs.com/package/me-paas-sdk-react): React payWithMePaas rewards/payment modal.
+- [me-paas-sdk-inline (GitHub)](https://github.com/Me-Protocol/me-paas-sdk-inline): framework-free inline pay/reward surface.
+
+## Repos
+
+- [GitHub Organization](https://github.com/Me-Protocol)
+- [Me-Protocol core (TypeScript)](https://github.com/Me-Protocol/Me-Protocol)
+- [rusty-protocol-v0.1 (Rust)](https://github.com/Me-Protocol/rusty-protocol-v0.1)
+
+## Artifacts (API Evangelist enrichment)
+
+- [Packages / SDKs](packages/my-ai-packages.yml)
+- [Embedded Components](components/my-ai-components.yml)
+- [Authentication](authentication/my-ai-authentication.yml)
+- [Conventions](conventions/my-ai-conventions.yml)
+- [Sandbox / Environments](sandbox/my-ai-sandbox.yml)
+- [Domain Security](security/my-ai-domain-security.yml)
